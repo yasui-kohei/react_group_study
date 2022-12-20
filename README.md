@@ -1,1 +1,1 @@
-# react_group_study
+# Reactの勉強会ソースコードを格納しています。
