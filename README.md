@@ -3,7 +3,7 @@
 Reactの勉強会に利用するコードを格納しています。
 
 ### ■各ブランチのソースコードにについて
-- redux-sample：Reduxのサンプルコード
+- redux_simple_app：Reduxのサンプルコード
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
