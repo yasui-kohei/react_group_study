@@ -5,12 +5,11 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 import { createStore } from 'redux';
-import { Provider } from 'react';
+import { Provider } from 'react-redux';
 import reducer from "./reducers";
-import App from './components/App';
 
 /// storeの生成がされている
-const store = createStore(reducer)
+const store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

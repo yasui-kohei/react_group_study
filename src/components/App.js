@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { connect } from 'react-redux'
+import {increment, decrement } from '../actions';
+
+
+class App extends Component {
+  render() {
+    const props = this.props
+
+    return (
+      <React.Fragment>
+        <div>count: { props.count }</div>
+        <button onClick={props.increment}>+1</button>
+        <button onClick={props.decrement}>-1</button>
+      </React.Fragment>
+    )
+  }
 }
 
-export default App;
+/// stateとActionをPropsのコンポーネントと関連付ける部分
+
+const mapStateToProps = state => ({count: state.count.count})
+const mapDispatchToProps = dispatch => ({
+  increment: () => dispatch(increment()),
+  decrement: () => dispatch(decrement())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App)

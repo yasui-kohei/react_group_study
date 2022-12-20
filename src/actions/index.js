@@ -8,11 +8,11 @@ export const DECREMENT = 'DECREMENT'
 
 // ActionCreator
 // View側で何かしらのイベントが行われたときに、行いたい状態遷移の定義を行っている。
-export const increment = () => {{
+export const increment = () => ({
     type: INCREMENT
-}}
+})
 
-export const decrement = () => {{
+export const decrement = () => ({
     type: DECREMENT
-}}
+})
 
